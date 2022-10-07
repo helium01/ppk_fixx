@@ -1,0 +1,1506 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+  
+  a:link button{
+    text-decoration: none;
+    color: #fff;
+  }
+
+  li{
+    list-style-type:none ;
+  }
+  
+  html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, div
+  pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q,
+  s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
+  figure, header, nav, section, article, aside, footer, figcaption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    right: 0;
+    left: 0;
+    
+  }
+
+  body{
+    overflow-x:hidden;
+    /* overflow: hidden; */
+  }
+
+  .button-default{
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px;
+    width: 160px;
+    gap: 10px;
+
+    background: #1AA37A;
+    border: 2px solid #1AA37A;
+    border-radius: 12px;
+  }
+
+  .button-custom-white{
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px;
+    width: 160px;
+    gap: 10px;
+
+    background: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    border-radius: 12px;
+  }
+
+  .button-text{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    /* identical to box height */
+
+    letter-spacing: 0.065em;
+
+    color: #FFFFFF;
+
+  }
+
+  .button-text-custom{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    /* identical to box height */
+
+    letter-spacing: 0.065em;
+
+    color: #1AA37A;
+
+  }
+
+
+  section#navbar-section nav{
+    background-color: #FFFFFF;
+  }
+  
+  section#navbar-section .navbar .container .navbar-brand img{
+    width: 65px;
+  }
+  
+  section#navbar-section .navbar .container .collapse .navbar-nav .nav-item .nav-link{
+    margin: 0px 16px 0px 16px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height */
+
+    letter-spacing: 0.065em;
+
+    color: black;
+
+  }
+
+  section#navbar-section .navbar .container .collapse  .dropdown-item{
+    margin: 0px 16px 0px 16px;
+    
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height */
+
+    letter-spacing: 0.065em;
+
+    color: black;
+  }
+
+  section#footer{
+    background: linear-gradient(0deg, #1AA37A, #1AA37A), #1AA37A;
+    padding-top: 72px;
+  }
+
+  section#footer h1{
+    margin-top: 24px;
+    max-width: 260px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.065em;
+
+    color: #FFFFFF;
+  }
+
+  section#footer .container-nav{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 40px;
+  }
+
+  section#footer .container-nav .menu-nav{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+  }
+
+  section#footer .container-nav .menu-nav h1{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+
+    color: #FFFFFF;
+  }
+
+  section#footer .container-nav .menu-nav li{
+    margin-bottom: 16px;
+  }
+
+  section#footer .container-nav .menu-nav li a{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    text-decoration: none;
+    
+    
+    color: #FFFFFF; 
+  }
+
+  section#footer .additional span{
+    border: 0px;
+  }
+
+  section#footer span{
+    margin-top: 26px;
+    margin-bottom: 32px;
+    height: 1px;
+    left: 120px;
+    border: 1px solid #FFFFFF;
+  }
+
+  section#footer p{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+
+    color: #FFFFFF;
+    margin-bottom: 34px;
+  }
+
+  section#main-banner{
+    margin-top: 200px;
+  }
+
+  section#main-banner .text-main-banner{
+    margin-top: 40px;
+    margin-bottom: 28px;
+  }
+
+  section#main-banner .text-main-banner h1{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 60px;
+    /* or 125% */
+    
+    letter-spacing: 0.065em;
+    
+    color: #000000;
+  }
+
+  section#main-banner .text-main-banner h1 span{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 60px;
+    /* or 125% */
+    
+    letter-spacing: 0.065em;
+    
+    color: #1AA37A;;
+  }
+
+  section#main-banner .text-main-banner p{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    /* or 156% */
+
+    letter-spacing: 0.065em;
+
+    color: #616161;
+
+    max-width: 585px;
+    margin-top: 28px;
+  }
+
+  section#main-banner .image-banner{
+    margin-top: -35px;
+  }
+
+  section#main-banner .image-banner img{
+    width: 610px; 
+  }
+
+  section#about-seledri{
+    margin-top: 100px;
+  }
+
+  section#about-seledri .text-about-seledri{
+    margin-top: 146px;
+  }
+
+  section#about-seledri .text-about-seledri h1{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 60px;
+    /* identical to box height, or 150% */
+
+    letter-spacing: 0.065em;
+
+    color: #000000;
+
+    margin-bottom: 24px;
+
+  }
+
+  section#about-seledri .text-about-seledri p{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 150%;
+    /* max-width: 585px; */
+    /* or 27px */
+
+    letter-spacing: 0.065em;
+
+    color: #616161;
+  }
+
+
+
+  
+  .sec-preview-product {
+    margin-top: 86px;
+    background-color: #1aa37a;
+    padding: 40px 0 130px 0;
+  }
+  
+  .title {
+    margin-top: 66px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 60px;
+    /* identical to box height, or 150% */
+  
+    letter-spacing: 0.065em;
+  }
+  
+  .description {
+    margin-top: 24px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    /* or 27px */
+  
+    letter-spacing: 0.065em;
+  }
+  
+  .btn-white {
+    margin-top: 24px;
+    padding: 14px 32px;
+    background: #ffffff;
+    border-radius: 12px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height */
+  
+    letter-spacing: 0.065em;
+  
+    color: #1aa37a;
+  }
+  
+  .card-preview-product {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 20px 20px 40px 20px;
+  }
+  
+  .flex-product {
+    margin-top: 66px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 32px;
+  }
+  
+  .text-preview-product {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 35px;
+    /* identical to box height, or 125% */
+  
+    letter-spacing: 0.065em;
+    margin-top: 24px;
+  }
+  
+  .btn-icon {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 8px;
+  }
+  
+  .flex-button-icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+    gap: 28px;
+    margin-top: 48px;
+  }
+
+  section#galery{
+    position: relative;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  section#galery h1{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 60px;
+    /* identical to box height, or 150% */
+
+    letter-spacing: 0.065em;
+
+    color: #000000;
+    text-align: center;
+    padding-top: 114px;
+    padding-bottom: 60px;
+  }
+
+  section#galery .swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  section#galery .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 617px;
+    height: 369px;
+  }
+
+  section#galery .swiper-slide img {
+    display: block;
+    width: 100%;
+  }
+
+  section#galery .layout{
+    padding-bottom: 102px;
+  }
+  
+  /* HALAMAN CONTACT US */
+  section#contact{
+    margin-top:  12rem; 
+  }
+
+  section#contact h1{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 60px;
+
+    color: #000000;
+  }
+
+  section#contact .card{
+    margin-top: 40px;
+    box-sizing: border-box;
+    
+    background: #FFFFFF;
+    border-radius: 12px;
+  }
+
+  section#contact .card:hover{
+    border: 4px solid #1AA37A;
+  }
+
+  section#contact .card .container-card{
+    margin: 24px 0px 24px 0px;
+  }
+
+  section#contact .card .container-card a{
+    text-decoration: none;
+    text-shadow: none;
+    text-decoration-line: none;
+    text-decoration-style: none;
+    text-decoration-color: unset;
+
+  }
+
+  section#contact .card .container-card a img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  section#contact .card .container-card a p{
+    margin-top: 24px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    
+    letter-spacing: 0.065em;
+    
+    color: #616161;
+
+  }
+
+  section#contact .card .container-card a h1{
+    text-align: center;
+    margin-top: 16px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    /* identical to box height, or 120% */
+    
+    letter-spacing: 0.065em;
+    
+    color: #1AA37A;
+  }
+
+  section#contact .card .container-card a h2{
+    text-align: center;
+    margin-top: 16px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    /* identical to box height, or 120% */
+    
+    letter-spacing: 0.065em;
+    
+    color: #1AA37A;
+    /* display: block;
+    margin-left: auto;
+    margin-right: auto; */
+  }
+
+  section#location{
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
+
+  section#location h1{
+    text-align: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 60px;
+    /* identical to box height, or 150% */
+
+    letter-spacing: 0.065em;
+
+    color: #000000;
+  }
+
+  section#location .container-maps{
+    margin-top: 40px;
+    height: 450px;
+  }
+
+  section#location .container-maps iframe{
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  section#header{
+    height: 78px;
+}
+
+
+
+/* HALAMAN PRODUK */
+
+section#banner-slide{
+  padding-top: 12rem;
+  height: 450px;
+}
+
+section#banner-slide .slider-container{
+  position: relative;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+section#banner-slide .slider-container .swiper {
+  width: 1280px;
+  height: 450px;
+  border-radius: 40px;
+}
+
+section#banner-slide .slider-container .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+section#banner-slide .slider-container .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+section#banner-slide .layout{
+  padding-bottom: 148px;
+}
+
+section#produk-terlaris{
+    background: #D0FADD;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 200px;
+    padding-top: 48px;
+}
+
+section#produk-terlaris .container .row .name-header p{
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 0.065em;
+    margin-bottom: 60px;
+}
+
+section#produk-terlaris .container .row img{
+    width: 430px;
+    filter: drop-shadow(0px 12px 32px rgba(0, 0, 0, 0.2));
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section#produk-terlaris .desc-produk-terlaris .container-spec-produk{
+  margin: auto;
+  left: 0;
+  width: 42.5%;
+}
+
+section#produk-terlaris .container .row .desc-produk-terlaris .nama-produk-terlaris{
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 0.065em;
+    margin-bottom: 12px;
+}
+
+section#produk-terlaris .container .row .desc-produk-terlaris .harga-produk-terlaris{
+    font-size: 32px;
+    font-weight: 700;
+    color: #1AA37A;
+    letter-spacing: 0.065em;
+    margin-bottom: 20px;
+
+}
+
+
+
+section#produk-terlaris .container .row .desc-produk-terlaris .spesifikasi{
+    font-size: 16px;
+    letter-spacing: 0.065em;
+    margin-bottom: 20px;
+
+}
+
+section#produk-terlaris .container .row .desc-produk-terlaris .spesifikasi p{
+    color: #616161;
+    margin-top: 0px;
+}
+
+section#produk-terlaris .container .row .desc-produk-terlaris .spesifikasi .kondisi-produk-terlaris, .berat-produk-terlaris, .kategori-produk-terlaris{
+    margin-bottom: 4px;
+}
+
+section#produk-terlaris .container .row .desc-produk-terlaris .spesifikasi p span{
+    color: #1AA37A;
+}
+
+section#produk-terlaris .container .row .desc-produk-terlaris .deskripsi-produk-terlaris{
+    font-size: 16px;
+    font-weight: 500;
+    color: #616161;
+    letter-spacing: 0.065em;
+    margin-bottom: 20px;
+}
+
+section#produk-terlaris .container .row .desc-produk-terlaris .jumlah{
+    font-size: 16px;
+    font-weight: 500;
+    color: #616161;
+    letter-spacing: 0.065em;
+}
+
+section#produk-terlaris .container .row .desc-produk-terlaris .btn-pesan-whatsapp{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height */
+    
+    letter-spacing: 0.065em;
+    
+    color: #FFFFFF;  
+
+    width: 552px;
+    height: 60px;
+    
+    background: #1AA37A;
+    border: 2px solid #1AA37A;
+    
+    border-radius: 12px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section#produk-terlaris .container .row .desc-produk-terlaris .btn-pesan-whatsapp img{
+    width: 32px;
+    align-items: center;
+}
+
+section#produk-kami{
+    font-family: 'Poppins', sans-serif;
+    padding: 100px;
+}
+
+section#produk-kami .row .name-header p{
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 0.065em;
+    margin-bottom: 60px;
+}
+
+section#produk-kami .container .card-container{
+    margin-bottom: 60px;
+}
+
+section#produk-kami .container .card-container .nav-produk a .navigasi-produk-kami{
+    width: auto;
+    height: 72px;
+    border-radius: 40px;
+    box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.15);
+}
+
+section#produk-kami .container .card-container .nav-produk a .navigasi-produk-kami:hover{
+    background: #D0FADD;
+}
+
+section#produk-kami .container .card-container .nav-produk a{
+    text-decoration: none;
+}
+
+section#produk-kami .card-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 40px;
+}
+
+section#produk-kami .container .card-container .nav-produk a .navigasi-produk-kami p{
+    color: #000000;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+section#produk-kami .container .card-container .nav-produk a .navigasi-produk-kami{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 16px;
+    gap: 16px;
+}
+
+section#produk-kami .container .card-container .nav-produk a .logo-button{
+    width: 44px;
+    height: 44px;
+    border-radius: 40px;
+    background: #1AA37A;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+section#produk-kami .container .search form .search-input{
+    width: 327px;
+    height: 52px;
+    background: #E1DCFF;
+    font-size: 16px;
+    padding: 14px 16px;
+    border: 0px;
+    border-radius: 12px;
+    transition: all 0.15s ease;
+    -webkit-transition: all 0.15s ease;
+    -moz-transition: all 0.15s ease;
+    -ms-transition: all 0.15s ease;
+    -o-transition: all 0.15s ease;
+}
+
+section#produk-kami .container .search form .search-input:focus{
+    outline: 0px;
+    background: #C5BDF0;
+    transition: all 0.15s ease;
+    color: #000000;
+    -webkit-transition: all 0.15s ease;
+    -moz-transition: all 0.15s ease;
+    -ms-transition: all 0.15s ease;
+    -o-transition: all 0.15s ease;
+}
+
+section#produk-kami .container .search form .btn-cari{
+    background: #1AA37A;
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    margin-left: 16px;
+}
+
+section#produk-kami .container .search form .container-most-popular .most-popular{
+    margin-left: 40px;
+    color: #616161;
+    
+}
+
+section#produk-kami .container .search form .container-most-popular{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 40px;
+    margin-top: 15.5px;
+}
+
+section#produk-kami .container .search form .container-most-popular .most-history{
+    color: #1AA37A;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+section#produk-kami .container .teh-herbal .name-header p{
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 0.065em;
+}
+
+section#produk-kami .card-teh-herbal{
+  width: 380px;
+  background: #ffffff;
+  filter: drop-shadow(0px 8px 40px rgba(0, 0, 0, 0.1));
+  border-radius: 16px;
+  padding: 24px;
+}
+
+section#produk-kami .card-teh-herbal .img-product{
+  width: 332px;
+  height: 280px;
+  background: #D0FADD;
+  border-radius: 12px;
+}
+
+section#produk-kami .card-teh-herbal .img-product img{
+  height: 211px;
+  width: 202px;
+  object-fit:cover;
+  margin-top: 34px;
+  margin-left: 65px;
+}
+
+section#produk-kami .card-teh-herbal .container-card{
+  margin: 25px 12px 28px 12px;
+}
+
+section#produk-kami .card-teh-herbal .container-card h1{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 25px;
+  /* identical to box height, or 125% */
+
+  letter-spacing: 0.065em;
+
+  color: #000000;
+  text-align: start;
+  margin-bottom: 20px;
+}
+
+section#produk-kami .card-teh-herbal .container-card p{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 34px;
+  /* identical to box height */
+  
+  letter-spacing: 0.065em;
+  
+  color: #1AA37A;
+}
+
+section#produk-kami .card-teh-herbal .container-card .text-seller-card{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height */
+
+  letter-spacing: 0.065em;
+
+  color: #000000;
+}
+
+section#produk-kami .card-teh-herbal .container-card .text-seller-card span img{
+  width: 36px;
+  height: 36px;
+  object-fit: cover;
+  margin-right: 8px;
+  border-radius: 50%;
+}
+
+section#produk-kami .card-teh-herbal .button-pos{
+  margin-top: -23px;
+  position: absolute;
+  display: flex;
+  justify-content: end;
+}
+
+section#produk-kami .card-teh-herbal .btn-buy{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 202px;
+  height: 58px;
+
+  background: #1AA37A;
+  border-radius: 16px 0px;
+}
+
+section#produk-kami .card-teh-herbal .btn-buy   a{
+  text-decoration-line: none;
+}
+
+section#produk-kami .card-teh-herbal .btn-buy a h2{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  /* identical to box height */
+
+  letter-spacing: 0.065em;
+
+  color: #FFFFFF;
+}
+
+/* Tentang Kami */
+section#header-about {
+  margin-top: 200px;
+}
+
+section#header-about .text-main-banner h1 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+  /* or 125% */
+
+  letter-spacing: 0.065em;
+
+  color: #000000;
+  margin-bottom: 28px;
+}
+
+section#header-about .text-main-banner p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  /* or 156% */
+
+  text-align: center;
+  letter-spacing: 0.065em;
+
+  color: #616161;
+  width: 80%;
+  margin: auto;
+}
+
+section#header-about .container .sec-header {
+  height: 612px;
+  background-image: url("../Images/bg-about.png");
+  border-radius: 40px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+section#data {
+  margin-top: 100px;
+}
+
+section#data .container .row .text-lg-data h1 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 96px;
+  line-height: 116px;
+  letter-spacing: 0.065em;
+
+  color: #04474e;
+  margin-bottom: 16px;
+}
+
+section#data .container .row .text-lg-data p,
+section#data .container .row .text-md-data .card-md-data p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  /* or 156% */
+
+  letter-spacing: 0.065em;
+
+  color: #616161;
+  margin-bottom: 32px;
+}
+
+section#data .container .row .text-lg-data h4 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 39px;
+  /* identical to box height */
+
+  letter-spacing: 0.065em;
+
+  color: #1aa37a;
+}
+
+section#data .container .row .text-md-data .card-md-data h1 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+  /* identical to box height */
+
+  letter-spacing: 0.065em;
+
+  color: #04474e;
+}
+
+section#data .container .row .text-md-data .card-md-data {
+  padding: 24px;
+  background-color: #fff;
+  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  margin-bottom: 32px;
+}
+
+section#stakeholder {
+  margin-top: 100px;
+}
+
+section#stakeholder .container h1 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 60px;
+  /* identical to box height */
+
+  letter-spacing: 0.065em;
+
+  color: #000000;
+}
+
+section#stakeholder .container .card-stakeholder {
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+section#stakeholder .container .card-stakeholder h2 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 39px;
+  /* identical to box height */
+
+  letter-spacing: 0.065em;
+
+  color: #000000;
+  margin-bottom: 24px;
+}
+
+section#stakeholder .container .card-stakeholder p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  /* or 156% */
+
+  letter-spacing: 0.065em;
+
+  color: #616161;
+}
+
+section#benefit .container-benefit {
+  background-color: #fff9cc;
+  padding-top: 60px;
+}
+
+section#benefit .container-benefit h1 {
+  font-family: "inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 60px;
+  /* identical to box height */
+
+  letter-spacing: 0.065em;
+
+  color: #000000;
+  margin-bottom: 48px;
+}
+
+section#benefit {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+/* Detail Product */
+section#detail-product {
+  margin-top: 200px;
+}
+
+section#detail-product .img-product-detail {
+  width: 100%;
+  height: 100%;
+}
+
+section#detail-product .sec-desc-product-detail h1 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 48px;
+  /* identical to box height */
+
+  letter-spacing: 0.065em;
+
+  color: #000000;
+  margin-bottom: 12px;
+}
+
+section#detail-product .sec-desc-product-detail .price {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 48px;
+  /* identical to box height */
+
+  letter-spacing: 0.065em;
+
+  color: #1aa37a;
+  margin-bottom: 20px;
+}
+
+section#detail-product .sec-desc-product-detail .price-normal {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  /* identical to box height */
+
+  letter-spacing: 0.065em;
+  text-decoration-line: line-through;
+
+  color: #616161;
+}
+
+section#detail-product .sec-desc-product-detail .discount {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 8px;
+  gap: 4px;
+
+  background: #d6283a;
+  border-radius: 8px;
+}
+
+section#detail-product .sec-desc-product-detail .discount .text-disc {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.065em;
+
+  color: #ffffff;
+}
+
+section#detail-product .sec-desc-product-detail .seller {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+section#detail-product .sec-desc-product-detail .seller img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+section#detail-product .sec-desc-product-detail .seller p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  /* identical to box height, or 156% */
+
+  letter-spacing: 0.065em;
+
+  color: #616161;
+}
+
+section#detail-product .sec-desc-product-detail .btn-pesan-whatsapp {
+  font-size: 16px;
+  padding: 14px 18px;
+  background: #1aa37a;
+  color: #ffffff;
+  width: 100%;
+  border-radius: 12px;
+
+  font-family: "inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height */
+
+  letter-spacing: 0.065em;
+
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+section#detail-product .sec-desc-product-detail .btn-share {
+  text-decoration: none;
+  font-family: "inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 150%;
+  /* identical to box height, or 18px */
+
+  letter-spacing: -0.01em;
+
+  color: #212121;
+}
+
+section#sec-desc-product .container h4 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.065em;
+
+  color: #000000;
+  margin-bottom: 40px;
+}
+
+section#sec-desc-product .container .desc-product .data-desc-product {
+  margin-bottom: 20px;
+}
+
+section#sec-desc-product .container .desc-product .data-desc-product p {
+  font-family: "inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height */
+
+  letter-spacing: 0.065em;
+
+  color: #616161;
+}
+
+section#sec-desc-product .container .desc-product .data-desc-product p span {
+  font-family: "inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height */
+
+  letter-spacing: 0.065em;
+
+  color: #1aa37a;
+}
+
+section#sec-desc-product .container .description-product p {
+  font-family: "inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height */
+
+  letter-spacing: 0.065em;
+
+  color: #616161;
+}
+
+section#similar-product{
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+section#similar-product .container .teh-herbal .name-header p{
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 0.065em;
+}
+
+section#similar-product .card-teh-herbal{
+width: 380px;
+background: #ffffff;
+filter: drop-shadow(0px 8px 40px rgba(0, 0, 0, 0.1));
+border-radius: 16px;
+padding: 24px;
+}
+
+section#similar-product .card-teh-herbal .img-product{
+width: 332px;
+height: 280px;
+background: #D0FADD;
+border-radius: 12px;
+}
+
+section#similar-product .card-teh-herbal .img-product img{
+height: 211px;
+width: 202px;
+object-fit:cover;
+margin-top: 34px;
+margin-left: 65px;
+}
+
+section#similar-product .card-teh-herbal .container-card{
+margin: 25px 12px 28px 12px;
+}
+
+section#similar-product .card-teh-herbal .container-card h1{
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 25px;
+/* identical to box height, or 125% */
+
+letter-spacing: 0.065em;
+
+color: #000000;
+text-align: start;
+margin-bottom: 20px;
+}
+
+section#similar-product .card-teh-herbal .container-card p{
+font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 28px;
+line-height: 34px;
+/* identical to box height */
+
+letter-spacing: 0.065em;
+
+color: #1AA37A;
+margin-bottom: 16px;
+}
+
+section#similar-product .card-teh-herbal .container-card .text-seller-card{
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 15px;
+/* identical to box height */
+
+letter-spacing: 0.065em;
+
+color: #000000;
+margin-bottom: 16px;
+}
+
+section#similar-product .card-teh-herbal .container-card .text-seller-card span img{
+width: 36px;
+height: 36px;
+object-fit: cover;
+margin-right: 8px;
+border-radius: 50%;
+}
+
+section#similar-product .card-teh-herbal .button-pos{
+margin-top: -23px;
+position: absolute;
+display: flex;
+justify-content: end;
+}
+
+section#similar-product .card-teh-herbal .btn-buy{
+display: flex;
+flex-direction: row;
+justify-content: flex-end;
+align-items: center;
+width: 202px;
+height: 58px;
+
+background: #1AA37A;
+border-radius: 16px 0px;
+}
+
+section#similar-product .card-teh-herbal .btn-buy   a{
+text-decoration-line: none;
+}
+
+section#similar-product .card-teh-herbal .btn-buy a h2{
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 30px;
+/* identical to box height */
+
+letter-spacing: 0.065em;
+
+color: #FFFFFF;
+}
+
+
+
+/* RESPONSIVE */
+@media (max-width:0px ){
+
+}

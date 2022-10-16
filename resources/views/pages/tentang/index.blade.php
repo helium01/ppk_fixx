@@ -52,7 +52,7 @@
                     <td>{{$item->email}}</td>
                     <td>{{$item->deskripsi}}</td>
                     <td>{{$item->kode_pos}}</td>
-                    <td>{{$item->logo}}</td>
+                    <td><img src="{{asset('foto/'.$item->logo)}}" alt="" width="100"></td>
                     <td>
                       <a href="{{route('tentang.edit',['id' => $item->id])}}" class="btn btn-primary">
                         <i class="fas fa-edit"></i>

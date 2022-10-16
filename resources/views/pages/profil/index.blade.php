@@ -46,9 +46,9 @@
                     <td>{{$no++}}</td>
                     <td>{{$item->nama}}</td>
                     <td>{{$item->moto}}</td>
-                    <td><img src="{{asset('foto')/.$item->foto_1}}" alt=""></td>
-                    <td><img src="{{asset('foto')/.$item->foto_2}}" alt=""></td>
-                    <td><img src="{{asset('foto')/.$item->foto_3}}" alt=""></td>
+                    <td><img src="{{asset('foto/'.$item->foto_1)}}" alt="" width="100"></td>
+                    <td><img src="{{asset('foto/'.$item->foto_2)}}" alt="" width="100"></td>
+                    <td><img src="{{asset('foto/'.$item->foto_3)}}" alt="" width="100"></td>
                     <td>
                       <a href="{{route('profil.edit',['id' => $item->id])}}" class="btn btn-primary">
                         <i class="fas fa-edit"></i>

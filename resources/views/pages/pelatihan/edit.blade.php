@@ -6,7 +6,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-12">
-          <form method="POST" action="{{ route('pelatihan.update', ['id' => $pelatihan->id]) }}">
+          <form method="POST" action="{{ route('pelatihan.update', ['id' => $pelatihan->id]) }}" enctype="multipart/form-data">
             <div class="card">
               <div class="card-header">
                 <h4>Form Edit Data Pelatihan <strong>{{$pelatihan->nama_kegiatan}}</strong></h4>
@@ -36,7 +36,7 @@
                     </div>
                     <div class="form-group">
                       <label for="name">Foto</label>
-                      <input id="foto" type="text" class="form-control" name="foto" placeholder="Foto" value="{{$pelatihan->foto}}">
+                      <input id="foto" type="file" class="form-control" name="foto" placeholder="Foto" value="{{$pelatihan->foto}}">
                     </div>
                     <button type="submit" class="btn btn-primary btn-lg" tabindex="4">
                       <i class="fas fa-pen"></i>

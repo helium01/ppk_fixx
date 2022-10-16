@@ -6,7 +6,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-12">
-          <form method="POST" action="{{ route('tentang.update', ['id' => $tentang->id]) }}">
+          <form method="POST" action="{{ route('tentang.update', ['id' => $tentang->id]) }}" enctype="multipart/form-data">
             <div class="card">
               <div class="card-header">
                 <h4>Form Edit Data Tentang <strong>{{$tentang->nama}}</strong></h4>
@@ -44,7 +44,7 @@
                     </div>
                     <div class="form-group">
                       <label for="name">Logo</label>
-                      <input id="logo" type="text" class="form-control" name="logo" placeholder="Logo" value="{{$tentang->logo}}">
+                      <input id="logo" type="file" class="form-control" name="logo" placeholder="Logo" value="{{$tentang->logo}}">
                     </div>
                     <button type="submit" class="btn btn-primary btn-lg" tabindex="4">
                       <i class="fas fa-pen"></i>

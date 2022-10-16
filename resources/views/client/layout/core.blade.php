@@ -50,12 +50,6 @@
                     <a href="{{route('login')}}" class="button-default">
                         <h1 class="button-text">login</h1>
                     </a>
-
-                        @if (Route::has('register'))
-                        <a href="{{route('register')}}" class="button-default">
-                        <h1 class="button-text">daftar</h1>
-                    </a>
-                        @endif
                     @endauth
                 </div>
             @endif
@@ -79,7 +73,7 @@
                                 <p>Temukan produk olahan teh unik berbahan dasar 
                                     tanaman seledri dan hasil pertanian lainnya sekarang</p>
                             </div>
-                            <a class="button-default">
+                            <a href="{{route('produk')}}" class="button-default">
                                 <h1 class="button-text">Lihat Produk</h1>
                             </a>
                         </div>

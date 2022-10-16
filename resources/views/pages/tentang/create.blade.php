@@ -6,7 +6,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-12">
-          <form method="POST" action="{{route('tentang.store')}}">
+          <form method="POST" action="{{route('tentang.store')}}" enctype="multipart/form-data">
             <div class="card">
               <div class="card-header">
                 <h4>Form Tentang</h4>
@@ -43,7 +43,7 @@
                     </div>
                     <div class="form-group">
                       <label for="name">Logo</label>
-                      <input id="logo" type="text" class="form-control" name="logo" placeholder="Logo">
+                      <input id="logo" type="file" class="form-control" name="logo" placeholder="Logo">
                     </div>
                     <button type="submit" class="btn btn-primary btn-lg" tabindex="4">
                       <i class="fas fa-plus"></i>

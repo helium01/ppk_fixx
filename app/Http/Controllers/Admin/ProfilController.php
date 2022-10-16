@@ -30,6 +30,12 @@ class ProfilController extends Controller
 
     public function store(Request $request)
     {
+        $this->validate($request,[
+            'moto',
+            'foto_1',
+            'foto_2',
+            'foto_3',
+        ]);
         $profil = new tb_profil();
         $profil->id_tentang = $request->id_tentang;
         $profil->moto = $request->moto;
@@ -38,7 +44,9 @@ class ProfilController extends Controller
             $request->file('foto_1')->move('foto/', $request->file('foto_1')->getClientOriginalName());
             $request->file('foto_2')->move('foto/', $request->file('foto_2')->getClientOriginalName());
             $request->file('foto_3')->move('foto/', $request->file('foto_3')->getClientOriginalName());
-            $profil->foto =$request->file('foto')->getClientOriginalName();
+            $profil->foto_1 =$request->file('foto_1')->getClientOriginalName();
+            $profil->foto_2 =$request->file('foto_2')->getClientOriginalName();
+            $profil->foto_3 =$request->file('foto_3')->getClientOriginalName();
             
         }
         $profil->save();
@@ -62,7 +70,9 @@ class ProfilController extends Controller
             $request->file('foto_1')->move('foto/', $request->file('foto_1')->getClientOriginalName());
             $request->file('foto_2')->move('foto/', $request->file('foto_2')->getClientOriginalName());
             $request->file('foto_3')->move('foto/', $request->file('foto_3')->getClientOriginalName());
-            $profil->foto =$request->file('foto')->getClientOriginalName();
+            $profil->foto_1 =$request->file('foto_1')->getClientOriginalName();
+            $profil->foto_2 =$request->file('foto_2')->getClientOriginalName();
+            $profil->foto_3 =$request->file('foto_3')->getClientOriginalName();
             
         }
         else{

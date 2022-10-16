@@ -26,6 +26,7 @@ class PelatihanController extends Controller
 
     public function store(Request $request)
     {
+        // dd($request);
         $pelatihan = new tb_pelatihan();
         $pelatihan->nama_kegiatan = $request->nama_kegiatan;
         $pelatihan->tanggal = $request->tanggal;
@@ -34,8 +35,8 @@ class PelatihanController extends Controller
         if($request->hasFile('foto')){
 
             $request->file('foto')->move('foto/', $request->file('foto')->getClientOriginalName());
-            $galeri->foto =$request->file('foto')->getClientOriginalName();
-            $galeri->save();
+            $pelatihan->foto =$request->file('foto')->getClientOriginalName();
+            $pelatihan->save();
         }
         $pelatihan->save();
         return redirect()->route('pelatihan.index')->with('message', 'Data berhasil ditambahkan');
@@ -54,7 +55,13 @@ class PelatihanController extends Controller
         $pelatihan->tanggal = isset($request->tanggal) ? $request->tanggal : $pelatihan->tanggal;
         $pelatihan->jenis_kegiatan = isset($request->jenis_kegiatan) ? $request->jenis_kegiatan : $pelatihan->jenis_kegiatan;
         $pelatihan->deskripsi = isset($request->deskripsi) ? $request->deskripsi : $pelatihan->deskripsi;
-        $pelatihan->foto = isset($request->foto) ? $request->foto : $pelatihan->foto;
+        if($request->hasFile('foto')){
+
+            $request->file('foto')->move('foto/', $request->file('foto')->getClientOriginalName());
+            $pelatihan->foto =$request->file('foto')->getClientOriginalName();
+        }else{
+            unset($pelatihan['foto']);
+        }
         $pelatihan->save();
         return redirect()->route('pelatihan.index')->with('message', 'Data berhasil diubah');
     }

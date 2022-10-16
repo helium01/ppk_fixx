@@ -26,6 +26,7 @@ class TentangController extends Controller
 
     public function store(Request $request)
     {
+        // dd($request);
         $tentang = new tb_tentang();
         $tentang->nama = $request->nama;
         $tentang->alamat = $request->alamat;
@@ -33,7 +34,12 @@ class TentangController extends Controller
         $tentang->email = $request->email;
         $tentang->deskripsi = $request->deskripsi;
         $tentang->kode_pos = $request->kode_pos;
-        $tentang->logo = $request->logo;
+        if($request->hasFile('logo')){
+
+            $request->file('logo')->move('foto/', $request->file('logo')->getClientOriginalName());
+            $tentang->logo =$request->file('logo')->getClientOriginalName();
+        }
+        // dd($tentang);
         $tentang->save();
         return redirect()->route('tentang.index')->with('message', 'Data berhasil ditambahkan');
     }
@@ -53,7 +59,13 @@ class TentangController extends Controller
         $tentang->email = isset($request->email) ? $request->email : $tentang->email;
         $tentang->deskripsi = isset($request->deskripsi) ? $request->deskripsi : $tentang->deskripsi;
         $tentang->kode_pos = isset($request->kode_pos) ? $request->kode_pos : $tentang->kode_pos;
-        $tentang->logo = isset($request->logo) ? $request->logo : $tentang->logo;
+        if($request->hasFile('logo')){
+
+            $request->file('logo')->move('foto/', $request->file('logo')->getClientOriginalName());
+            $tentang->logo =$request->file('logo')->getClientOriginalName();
+        }else{
+            unset($tentang['logo']);
+        }
         $tentang->save();
         return redirect()->route('tentang.index')->with('message', 'Data berhasil diubah');
     }

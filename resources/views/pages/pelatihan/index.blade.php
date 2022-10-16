@@ -48,7 +48,7 @@
                     <td>{{$item->tanggal}}</td>
                     <td>{{$item->jenis_kegiatan}}</td>
                     <td>{{$item->deskripsi}}</td>
-                    <td>{{$item->foto}}</td>
+                    <td><img src="{{asset('foto/'.$item->foto)}}" alt="" width="100"></td>
                     <td>
                       <a href="{{route('pelatihan.edit',['id' => $item->id])}}" class="btn btn-primary">
                         <i class="fas fa-edit"></i>

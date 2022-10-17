@@ -38,6 +38,10 @@
                       <input id="harga" type="number" class="form-control" name="harga" placeholder="Harga">
                     </div>
                     <div class="form-group">
+                      <label for="name">diskon sebesar</label>
+                      <input id="diskon" type="number" class="form-control" name="harga" placeholder="Harga">
+                    </div>
+                    <div class="form-group">
                       <label for="name">Deskripsi</label>
                       <input id="deskripsi" type="text" class="form-control" name="deskripsi" placeholder="Deskripsi">
                     </div>

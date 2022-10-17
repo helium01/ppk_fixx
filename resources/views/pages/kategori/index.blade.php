@@ -43,6 +43,7 @@
                   <tr>
                     <td>{{$no++}}</td>
                     <td>{{$item->nama_kategori}}</td>
+                    <td>{{$item->k_utama}}</td>
                     <td>{{$item->deskripsi}}</td>
                     <td><img src="{{asset('foto/'.$item->foto)}}" alt="" width="100" height="100"></td>
                     <td>

@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\tb_tentang;
+use App\Models\tb_kontak;
+use App\Models\tb_profil;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -18,8 +20,10 @@ class TentangController extends Controller
         $tentangs = new tb_tentang();
         $hasil=tb_tentang::count();
         $tentangs = $tentangs->get();
+        $kontak=tb_kontak::all();
+        $profil=tb_profil::all();
         // dd($hasil);
-        return view('pages.tentang.index', ['tentangs' => $tentangs,'hasil'=>$hasil]);
+        return view('pages.tentang.index', ['tentangs' => $tentangs,'hasil'=>$hasil,'kontak'=>$kontak,'profil'=>$profil]);
     }
 
     public function create()

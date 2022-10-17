@@ -18,6 +18,7 @@ class CreateTbKategorisTable extends Migration
             $table->string("nama_kategori");
             $table->text("deskripsi");
             $table->string("foto");
+            $table->string('k_utama');
             $table->timestamps();
         });
     }

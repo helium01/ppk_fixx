@@ -17,17 +17,17 @@
         <div class="container">
             <div class="row">
                 <div class="col col-md-4 text-lg-data m-auto">
-                    <h1>200+</h1>
+                    <h1>{{$pedagang}}</h1>
                     <p>Petani desa sumberejo yang bergabung dengan kami</p>
                     <h4>Mengenai PPKO</h4>
                 </div>
                 <div class="col col-md-4 text-md-data">
                     <div class="card-md-data">
-                        <h1>200+</h1>
+                        <h1>{{$produk}}</h1>
                         <p>Petani desa sumberejo yang bergabung dengan kami</p>
                     </div>
                     <div class="card-md-data">
-                        <h1>200+</h1>
+                        <h1>{{$kategoris}}</h1>
                         <p>Petani desa sumberejo yang bergabung dengan kami</p>
                     </div>
                 </div>

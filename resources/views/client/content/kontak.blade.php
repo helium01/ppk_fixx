@@ -25,10 +25,58 @@
                         <div class="col-lg-4">
                             <div class="card">
                                 <div class="container-card">
-                                    <a href="mailto: aghisnariziq24@gmail.com">
+                                    <a href="mailto: {{$k->email}}" target="_blank">
                                         <img src="Assets/Images/email.png" alt="Email">
                                         <p class="text-center">Email</p>
                                         <h2>{{$k->email}}</h2>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card">
+                                <div class="container-card">
+                                    <a href="https://wa.me/+62{{$k->no_telp}}" target="_blank">
+                                        <img src="Assets/Images/whatssap-icon.png" alt="Whatss app">
+                                        <p class="text-center">Whatsap</p>
+                                        <h1>{{$k->no_telp}}</h1>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mt-5">
+            <div class="text-center">
+                <h1>sosial media</h1>
+            </div>
+            @foreach($kontak as $k)
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="row">
+                       
+                        <div class="col-lg-4">
+                            <div class="card">
+                                <div class="container-card">
+                                    <a href="tel: {{$k->no_telp}}">
+                                        <img src="Assets/Images/phone.png" alt="Phone">
+                                        <p class="text-center">instagram</p>
+                                        <h1>{{$k->ak_instagram}}</h1>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card">
+                                <div class="container-card">
+                                    <a href="mailto: aghisnariziq24@gmail.com">
+                                        <img src="Assets/Images/email.png" alt="Email">
+                                        <p class="text-center">facebook</p>
+                                        <h2>{{$k->ak_facebook}}</h2>
                                     </a>
                                 </div>
                             </div>

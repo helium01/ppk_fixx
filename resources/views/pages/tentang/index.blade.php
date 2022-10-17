@@ -61,8 +61,21 @@
                       <a href="{{route('tentang.edit',['id' => $item->id])}}" class="btn btn-primary">
                         <i class="fas fa-edit"></i>
                       </a>
+                      @foreach($profil as $p )
+                      @if($p->id_tentang = $item->id)
+                      @else
                       <a href="{{route('tentang.delete',['id' => $item->id])}}" class="ml-1 btn btn-danger"><i
                           class="fas fa-trash"></i></a>
+                      @endif
+
+                      @endforeach
+                      @foreach($kontak as $k )
+                      @if($k->id_tentang = $item->id)
+                      @else
+                      <a href="{{route('tentang.delete',['id' => $item->id])}}" class="ml-1 btn btn-danger"><i
+                          class="fas fa-trash"></i></a>
+                      @endif
+                      @endforeach
                     </td>
                     @empty
                   <tr>

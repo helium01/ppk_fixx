@@ -29,6 +29,7 @@ class KategoriController extends Controller
         $kategori = new tb_kategori();
         $kategori->nama_kategori = $request->nama_kategori;
         $kategori->deskripsi = $request->deskripsi;
+        $kategori->k_utama = $request->k_utama;
         if($request->hasFile('foto')){
 
             $request->file('foto')->move('foto/', $request->file('foto')->getClientOriginalName());

@@ -40,6 +40,7 @@ class BarangController extends Controller
     $barang->harga = $request->harga;
     $barang->deskripsi = $request->deskripsi;
     $barang->berat = $request->berat;
+    $barang->diskon=$request->diskon;
     if($request->hasFile('foto')){
 
       $request->file('foto')->move('foto/', $request->file('foto')->getClientOriginalName());
@@ -65,6 +66,7 @@ class BarangController extends Controller
     $barang->harga = isset($request->harga) ? $request->harga : $barang->harga;
     $barang->deskripsi = isset($request->deskripsi) ? $request->deskripsi : $barang->deskripsi;
     $barang->berat = isset($request->berat) ? $request->berat : $barang->berat;
+    $barang->diskon=isset($request->diskon) ? $request->diskon : $barang->diskon;
     if($request->hasFile('foto')){
       // $barang->delete_image();
       $request->file('foto')->move('foto/', $request->file('foto')->getClientOriginalName());

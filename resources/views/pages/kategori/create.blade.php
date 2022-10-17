@@ -22,6 +22,13 @@
                       <input id="nama_kategori" type="text" class="form-control" name="nama_kategori" placeholder="Nama Kategori">
                     </div>
                     <div class="form-group">
+                      <label for="name">Kategori Utama</label>
+                      <select class="form-control  p-1" id="type" name="k_utama">
+                        <option value="produk olahan">produk olahan</option>
+                        <option value="produk pertanian">produk pertanian</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
                       <label for="name">Deskripsi</label>
                       <input id="deskripsi" type="text" class="form-control" name="deskripsi" placeholder="Deskripsi">
                     </div>

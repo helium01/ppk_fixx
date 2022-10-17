@@ -7,16 +7,17 @@
             <div class="text-center">
                 <h1>Hubungi Kami</h1>
             </div>
+            @foreach($kontak as $k)
             <div class="row">
                 <div class="col-lg-12">
                     <div class="row">
                         <div class="col-lg-4">
                             <div class="card">
                                 <div class="container-card">
-                                    <a href="tel: 081299401241">
+                                    <a href="tel: {{$k->no_telp}}">
                                         <img src="Assets/Images/phone.png" alt="Phone">
                                         <p class="text-center">No. Handphone</p>
-                                        <h1>0812-9940-1241</h1>
+                                        <h1>{{$k->no_telp}}</h1>
                                     </a>
                                 </div>
                             </div>
@@ -27,7 +28,7 @@
                                     <a href="mailto: aghisnariziq24@gmail.com">
                                         <img src="Assets/Images/email.png" alt="Email">
                                         <p class="text-center">Email</p>
-                                        <h2>Aghisnariziq24@gmail.com</h2>
+                                        <h2>{{$k->email}}</h2>
                                     </a>
                                 </div>
                             </div>
@@ -35,14 +36,15 @@
                         <div class="col-lg-4">
                             <div class="card">
                                 <div class="container-card">
-                                    <a href="https://wa.me/081299401241">
+                                    <a href="https://wa.me/+62{{$k->no_telp}}">
                                         <img src="Assets/Images/whatssap-icon.png" alt="Whatss app">
                                         <p class="text-center">Whatsap</p>
-                                        <h1>0812-9940-1241</h1>
+                                        <h1>{{$k->no_telp}}</h1>
                                     </a>
                                 </div>
                             </div>
                         </div>
+                        @endforeach
                     </div>
                 </div>
             </div>

@@ -19,7 +19,8 @@ class ProfilController extends Controller
         $profils = $profils->leftJoin('tb_tentangs', 'tb_tentangs.id', '=', 'tb_profils.id_tentang');
         $profils = $profils->select('tb_profils.*', 'tb_tentangs.nama as nama');
         $profils = $profils->get();
-        return view('pages.profil.index', ['profils' => $profils]);
+        $jumlah=tb_profil::count();
+        return view('pages.profil.index', ['profils' => $profils,'jumlah'=>$jumlah]);
     }
 
     public function create()

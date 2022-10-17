@@ -9,21 +9,20 @@
             <div class="col-lg-12">
                 <div class="row">
                     <div class="col-lg-5">
+                    @foreach($profil as $p)
                         <div class="image-about-seledri">
-                            <img class="img-fluid" src="{{asset('Assets')}}/Images/About-Seledri.png" alt="Seledri">
+                            <img class="img-fluid" src="{{asset('foto/'.$p->foto_2)}}" alt="Seledri">
                         </div>
                     </div>
                     <div class="col-lg-7">
                         <div class="justify-content-end">
                             <div class="text-about-seledri">
-                                <h1>Tanaman Seledri</h1>
-                                <p>Tanaman Seledri merupakan salah satu jenis sayuran yang termasuk  
-                                    dalam tanaman obat dimana biasa digunakan sebagai bumbu masakan. 
-                                    salah satu pengghasil tanaman seledri di Jawa Timr yaitu Desa 
-                                    Sumberejo. Dalam desa ini terdapat komoditas utama berupa tanaman 
-                                    seledri dengan luas lahan 40% dari luas lahan pertanian total</p>
+                                
+                                <h1>{{$p->nama}}</h1>
+                                <p>{{$p->deskripsi}}</p>
                             </div>
                         </div>
+                        @endforeach
                     </div>
                 </div>
             </div>

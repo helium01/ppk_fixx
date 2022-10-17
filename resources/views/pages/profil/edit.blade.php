@@ -30,6 +30,7 @@
                       <label for="name">Motto</label>
                       <input id="moto" type="text" class="form-control" name="moto" placeholder="Motto" value="{{$profil->moto}}">
                     </div>
+                    
                     <div class="form-group">
                       <label for="name">Foto 1</label>
                       <input id="foto_1" type="file" class="form-control" name="foto_1" placeholder="Foto 1" value="{{$profil->foto_1}}">

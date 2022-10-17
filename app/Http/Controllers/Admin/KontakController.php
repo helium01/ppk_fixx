@@ -19,7 +19,8 @@ class KontakController extends Controller
         $kontaks = $kontaks->leftJoin('tb_tentangs', 'tb_tentangs.id', '=', 'tb_kontaks.id_tentang');
         $kontaks = $kontaks->select('tb_kontaks.*', 'tb_tentangs.nama as nama');
         $kontaks = $kontaks->get();
-        return view('pages.kontak.index', ['kontaks' => $kontaks]);
+        $jumlah = tb_kontak::count();
+        return view('pages.kontak.index', ['kontaks' => $kontaks,'jumlah'=>$jumlah]);
     }
 
     public function create()

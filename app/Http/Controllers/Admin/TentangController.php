@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\tb_tentang;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class TentangController extends Controller
 {
@@ -15,8 +16,10 @@ class TentangController extends Controller
     public function index()
     {
         $tentangs = new tb_tentang();
+        $hasil=tb_tentang::count();
         $tentangs = $tentangs->get();
-        return view('pages.tentang.index', ['tentangs' => $tentangs]);
+        // dd($hasil);
+        return view('pages.tentang.index', ['tentangs' => $tentangs,'hasil'=>$hasil]);
     }
 
     public function create()

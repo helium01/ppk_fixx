@@ -66,13 +66,15 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="justify-content-end">
+                        @foreach($profil as $p)
                             <div class="text-main-banner">
+                            
                                 <h1>Marketplace <span>Produk</span></h1>
-                                <h1>Desa <span>Sumberejo</span></h1>
-                                
-                                <p>Temukan produk olahan teh unik berbahan dasar 
-                                    tanaman seledri dan hasil pertanian lainnya sekarang</p>
+                                <h1>Desa 
+                                    <span>{{$p->nama}}</span></h1>
+                                <p>{{$p->moto}}</p>
                             </div>
+                        
                             <a href="{{route('produk')}}" class="button-default">
                                 <h1 class="button-text">Lihat Produk</h1>
                             </a>
@@ -80,9 +82,10 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="image-banner ms-lg-5">
-                            <img class="img-fluid" src="{{asset('Assets')}}/Images/Woman-main-banner.png" alt="Main-Banner">
+                            <img class="img-fluid" src="{{asset('foto/'.$p->foto_1)}}" alt="Main-Banner">
                         </div>
                     </div>
+                   
                 </div>
             </div>
         </div>
@@ -97,23 +100,18 @@
                 <h4 class="description text-light">Berikut merupakan beberapa produk hasil olahan dan hasil
                     pertanian
                     desa
-                    Sumberejo</h4>
+                    {{$p->nama}}</h4>
+                    @endforeach
                 <a href="{{route('produk')}}" class="btn btn-white">Lihat Produk</a>
             </div>
             <div class="col-md-7">
                 <div class="flex-product">
+                    @foreach($kategori as $kt)
                     <div class="card-preview-product">
-                        <img src="/{{asset('Assets')}}/Images/sayur.png" alt="sayur">
-                        <p class="text-preview-product text-dark">Sayuran</p>
+                        <img src="{{asset('foto/'.$kt->foto)}}" width="100" alt="{{$kt->nama_kategori}}">
+                        <p class="text-preview-product text-dark">{{$kt->nama_kategori}}</p>
                     </div>
-                    <div class="card-preview-product">
-                        <img src="/{{asset('Assets')}}/Images/teh.png" alt="teh">
-                        <p class="text-preview-product text-dark">Teh Herbal</p>
-                    </div>
-                    <div class="card-preview-product">
-                        <img src="/{{asset('Assets')}}/Images/bumbudapur.png" alt="bumbu">
-                        <p class="text-preview-product text-dark">Bumbu Dapur</p>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -127,33 +125,11 @@
                 <h1>Galery</h1>
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
+                        @foreach($galery as $g)
                         <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                            <img src="{{asset('foto/'.$g->foto)}}" />
                         </div>
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-                        </div>
+                        @endforeach
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
@@ -168,8 +144,10 @@
             <div class="col-lg-12">
                 <div class="row">
                     <div class="col-lg-6">
-                        <img src="{{asset('Assets')}}/Images/Logo Ormawa.png" alt="Logo Ormawa">
-                        <h1>okay</h1>
+                        @foreach($profil as $pf)
+                        <img src="{{asset('foto/'.$pf->logo)}}" width="200"alt="Logo Ormawa">
+                        <h1>{{$pf->nama}}</h1>
+                        @endforeach
                     </div>
                     <div class="col-lg-6">
                         <div class="container-nav">
@@ -191,12 +169,12 @@
                             </div>
                             <div class="menu-nav additional">
                                 <h1>Kunjungi kami</h1>
+                                @foreach($kontak as $kt)
                                 <ul>
-                                    <li><div class="row"><div class="col col-md-1"><span><img src="{{asset('Assets')}}/Images/Location.png"></span></div><div class="col col-md-11"><a href="" target="_blank">Jl. Indragiri Gg. 1, RT.01/RW.08,
-                                        Sumberejo, Kec. Batu,Kota Batu,
-                                        Jawa Timur 65318</a></div></div></li>
+                                    <li><div class="row"><div class="col col-md-1"><span><img src="{{asset('Assets')}}/Images/Location.png"></span></div><div class="col col-md-11"><a href="" target="_blank">{{$kt->alamat}} {{$kt->kode_pos}}</a></div></div></li>
                                     <li><div class="row"><div class="col col-md-1"><span><img src="{{asset('Assets')}}/Images/Clock.png"></span></div><div class="col col-md-11"><a href="https://nekopoi.care" target="_blank">Setiap Hari - 8Pagi - 8Malam</a></div></div></li>
                                 </ul>
+                                @endforeach
                             </div>
                         </div>
                     </div>

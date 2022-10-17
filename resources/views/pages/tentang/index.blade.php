@@ -22,7 +22,11 @@
           <div class="card">
             <div class="card-header">
               <a href="#" class="btn btn-primary" target="_blank">CETAK PDF</a>
+              @if($hasil<1)
               <a href="{{route("tentang.create")}}" class="ml-1 btn btn-primary"><i class="fas fa-plus"></i></a>
+              @else
+              <a href="#" class="ml-1 btn btn-danger"><i class="fas fa-minus"></i></a>
+              @endif
             </div>
             <div class="card-body">
               <table id="example2" class="table table-bordered table-hover">
